@@ -10,8 +10,8 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        order = list(set(sorted(nums)))
+        order = sorted(list(set(nums)))
         if len(order) >= 3:
-            return order[2]
+            return order[len(order) - 3]
         else:
             return order[len(order) - 1]
